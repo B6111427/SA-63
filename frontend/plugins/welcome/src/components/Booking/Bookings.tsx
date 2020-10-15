@@ -105,7 +105,7 @@ const [userID, setUserID] = useState(Number);
 const CreateBooking = async () => {
   setTimeleft("03:00:00")
   const booking = {
-    bookingDate : bookingdate + ":00+07:00",
+    bookingDate : bookingdate,
     timeLeft : timeleft,
     bookingtype : bookingtypeID,
     client : clientID,
@@ -218,7 +218,7 @@ return (
             >
               <TextField
                 id="deathtime"
-                label="ว/ด/ป เวลาเสียชีวิต"
+                label="ว/ด/ป วันที่จอง"
                 type="datetime-local"
                 value={bookingdate}
                 onChange={BookingDatehandleChange}
