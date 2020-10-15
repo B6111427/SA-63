@@ -23,7 +23,7 @@ func (Bookingtype) Fields() []ent.Field {
 // Edges of the Bookingtype.
 func (Bookingtype) Edges() []ent.Edge {
 	return []ent.Edge{
-		edge.To("booktype", Booking.Type).
+		edge.To("Booktype", Booking.Type).
 			StorageKey(edge.Column("BOOKINGTYPE_ID")),
 	}
 }

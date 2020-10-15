@@ -25,10 +25,10 @@ func (User) Fields() []ent.Field {
 // Edges of the User.
 func (User) Edges() []ent.Edge {
 	return []ent.Edge{
-		edge.To("booking", Booking.Type).
+		edge.To("Booking", Booking.Type).
 			StorageKey(edge.Column("USER_ID")),
-		edge.From("roleplay", Role.Type).
-			Ref("role").
+		edge.From("Roleplay", Role.Type).
+			Ref("Role").
 			Unique(),
 	}
 }

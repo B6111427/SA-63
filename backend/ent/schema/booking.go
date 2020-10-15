@@ -26,14 +26,14 @@ func (Booking) Fields() []ent.Field {
 // Edges of the Booking.
 func (Booking) Edges() []ent.Edge {
 	return []ent.Edge{
-		edge.From("usedby", User.Type).
-			Ref("booking").
+		edge.From("Usedby", User.Type).
+			Ref("Booking").
 			Unique(),
-		edge.From("book", Bookingtype.Type).
-			Ref("booktype").
+		edge.From("Book", Bookingtype.Type).
+			Ref("Booktype").
 			Unique(),
-		edge.From("using", ClientEntity.Type).
-			Ref("booked").
+		edge.From("Using", ClientEntity.Type).
+			Ref("Booked").
 			Unique(),
 	}
 }

@@ -22,7 +22,7 @@ func (Role) Fields() []ent.Field {
 // Edges of the Role.
 func (Role) Edges() []ent.Edge {
 	return []ent.Edge{
-		edge.To("role", User.Type).
+		edge.To("Role", User.Type).
 			StorageKey(edge.Column("ROLE_ID")),
 	}
 }
